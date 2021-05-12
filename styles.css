@@ -5,15 +5,13 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, sans-serif;
-  background-image: url(./images/redish.jpg);
-  background-size: 2000px 2100px;
-  background-position: center;
+  background-color: wheat;
+  border: 4px solid red;
+  border-style: ridge;
+  padding-bottom: 7%;
 }
 
 #logo {
@@ -31,7 +29,7 @@ body {
   padding: 1%;
   transition: 0.2s ease-in;
   text-decoration: none;
-  margin-left: 15px;
+  margin-left: 1%;
 }
 
 #logo-link:hover {
@@ -61,7 +59,8 @@ body {
 }
 
 #social-links {
-  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 #nav-link {
@@ -84,33 +83,49 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  min-height: 85vh;
 }
 
 #h-heading {
   font-size: 60px;
-  width: 50%;
   align-self: start;
-  margin-left: 20%;
+  padding: 5%;
   text-shadow: 1px 1px #ffffff;
+  border: 4px solid #e54b4b;
+  border-style: inset;
+  border-width: 850%;
 }
 
 span {
   color: darkred;
   font-weight: bold;
-  text-shadow: 2px 2px white;
 }
 
 #me {
   object-fit: contain;
-  align-self: flex-end;
-  padding-top: 100px;
+  align-self: center;
+  padding-top: 5%;
+  height: 30%;
+  width: 30%;
 }
+
+#p-link {
+  display: flex;
+  justify-content: center;
+}
+
+.p-link {
+  background-color: lightgray;
+}
+
 /* About Page */
 #about {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   text-align: center;
+  border: 2px solid red;
+  border-style: dotted;
 }
 
 #a-header {
@@ -125,28 +140,33 @@ span {
   text-transform: uppercase;
   text-shadow: 1px 1px #ffffff;
   text-decoration: underline;
-  margin-bottom: 25px;
+  padding: 2%;
 }
 #a-text {
   font-size: 23px;
   font-weight: bold;
   padding-left: 5%;
   padding-right: 5%;
-  margin-bottom: 25px;
   text-shadow: 1px 0 #ffffff;
   background-color: white;
-  border-radius: 50px;
   padding-bottom: 1%;
+  border: 8px red solid;
 }
 
 #about-me {
-  font-size: 35px;
-  text-shadow: 1px 1px #ffffff;
-  margin-bottom: 25px;
+  font-size: 30px;
+  padding: 1%;
 }
 
-details {
-  margin-bottom: 25px;
+#details {
+  border: 9px solid red;
+  border-style: dotted;
+  margin-bottom: 3%;
+  padding: 2%;
+}
+
+#hobby-contents {
+  border: 8px dotted red;
 }
 
 #my-hobbies {
@@ -190,15 +210,16 @@ details {
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  height: 60vh;
 }
 
 #se-intro {
   text-align: center;
+  padding: 2%;
 }
 
 #se-heading {
   font-size: 44px;
-  text-shadow: 1px 1px #ffffff;
   padding: 1%;
   text-decoration: underline;
 }
@@ -207,10 +228,11 @@ details {
   font-size: 25px;
   font-weight: bold;
   padding: 1%;
+  text-align: center;
 }
 
 #skills {
-  padding-top: 70px;
+  padding: 4%;
 }
 
 #s-header {
@@ -271,12 +293,12 @@ details {
 }
 
 .timeline-items {
-  background: rgba(2, 102, 116, 0.7);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgba(253, 253, 253, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border-radius: 10px;
-  color: white;
+  color: rgb(197, 0, 0);
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   padding: 10%;
   margin: 10%;
@@ -288,8 +310,8 @@ details {
   grid-column-start: 2;
   grid-row-start: 1;
   grid-row-end: 4;
-  background: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
@@ -306,20 +328,6 @@ details {
 .item-3 {
   grid-column: 3;
   grid-row: 3;
-}
-
-@media screen and (max-width: 800px) {
-  .timeline-container {
-    grid-template-columns: 10% 1fr;
-  }
-
-  .line {
-    grid-column-start: 1;
-  }
-
-  .timeline-item {
-    grid-column: 2;
-  }
 }
 
 /* Portfolio Page */
@@ -352,6 +360,8 @@ details {
   border-radius: 10px;
   overflow: hidden;
   padding: 1%;
+  border-style: groove;
+  border: 10px solid red;
 }
 
 .card-img {
@@ -461,6 +471,24 @@ q {
 
 /* Contact Form */
 
+#contact-icons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 5%;
+  padding-left: 8%;
+}
+
+#contact-icon {
+  text-align: center;
+  padding: 2%;
+  font-size: 20px;
+}
+
+#c-link {
+  text-decoration: none;
+}
+
 #contact-form {
   border: none;
   padding: 5% 7%;
@@ -473,18 +501,18 @@ q {
 
 .contact-heading {
   text-transform: uppercase;
-  margin-bottom: 10px;
+  font-size: 35px;
   width: 100%;
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 12px;
+  padding: 5%;
   color: #222;
 }
 .contact-details {
   padding: 12px;
   width: 100%;
-  padding-left: 34%;
+  padding-left: 30%;
 }
 
 .contact-input {
@@ -504,8 +532,8 @@ q {
 
 #textarea {
   padding: 5%;
-  min-width: 50%;
-  max-width: 50%;
+  min-width: 60%;
+  max-width: 60%;
   max-height: 30px;
   border: none;
 }
@@ -531,4 +559,19 @@ q {
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;
   transform: translateY(-7px);
+}
+
+/*m queries*/
+@media screen and (max-width: 800px) {
+  .timeline-container {
+    grid-template-columns: 10% 1fr;
+  }
+
+  .line {
+    grid-column-start: 1;
+  }
+
+  .timeline-items {
+    grid-column: 2;
+  }
 }
